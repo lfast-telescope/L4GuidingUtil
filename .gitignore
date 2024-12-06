@@ -1,0 +1,5 @@
+
+# data files
+data/*
+
+__pycache__/*
