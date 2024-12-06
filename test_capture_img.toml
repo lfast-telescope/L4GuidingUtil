@@ -1,8 +1,0 @@
-unit=''pix_sca='1.85 um / pix'pix_sca2='0.14245 arcsec / pix'exposure='0.1'[SensorParams]
-[name='default']
-[pixel_pitch='<class 'astropy.units.quantity.Quantity'>']
-[read_noise='<class 'astropy.units.quantity.Quantity'>']
-[gain='<class 'astropy.units.quantity.Quantity'>']
-[dark_current='<class 'astropy.units.quantity.Quantity'>']
-[bias='<class 'astropy.units.quantity.Quantity'>']
-[quantum_efficiency='<class 'astropy.units.quantity.Quantity'>']
