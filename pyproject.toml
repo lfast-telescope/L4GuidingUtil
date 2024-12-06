@@ -18,3 +18,7 @@ dependencies = [
 ]
 
 [project.scripts]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+exclude = ["data", "tests"]

@@ -1,13 +1,13 @@
 import numpy as np
 import astropy.units as u
 
-from L4_guiding_util import AnnotatedImage
-
 import pytest
 
 import logging
 
 logger = logging.getLogger(__name__)
+
+from L4_guiding_util import AnnotatedImage
 
 
 def test_basic():
