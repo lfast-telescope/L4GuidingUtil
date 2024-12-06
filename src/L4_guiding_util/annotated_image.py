@@ -7,15 +7,10 @@ import json
 import png
 from dataclasses import dataclass
 
-from typing import Optional
 import logging
 
 logger = logging.getLogger(__name__)
 logger.setLevel("DEBUG")
-
-if __name__ == "__main__":
-    logging.basicConfig()
-
 
 # NOTE: Use *= operator to apply a scalar to an image
 
@@ -391,14 +386,3 @@ def translate_img(img: np.ndarray, offset_x, offset_y) -> u.Quantity:
 
     shift_img[dest_slice_y, dest_slice_x] = img[src_slice_y, src_slice_x]
     return shift_img
-
-
-if __name__ == "__main__":
-
-    a = np.arange(10) * u.ph / u.s / u.m**2
-
-    pixel_scale = 0.077 * u.arcsec / u.pixel
-
-    q = AnnotatedImage(a, pixel_scale)
-
-    q = q.new_from_value(a * 5)
