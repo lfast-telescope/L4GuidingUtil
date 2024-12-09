@@ -312,7 +312,11 @@ class SensorImage(AnnotatedImage):
     """Image quantized to a sensor"""
 
     def __init__(
-        self, values, exposure: u.Quantity = None, sensor_params=None, **kwargs
+        self,
+        values,
+        exposure: u.Quantity = None,
+        sensor_params: SensorParams = None,
+        **kwargs,
     ):
         super().__init__(values, **kwargs)
         self.values = np.rint(self.values).astype(np.dtype(np.uint16))
@@ -320,6 +324,8 @@ class SensorImage(AnnotatedImage):
             exposure = exposure.to(u.s).value
         self.exposure = exposure
         self.sensor_params = sensor_params
+        if "pix_sca" not in kwargs and self.sensor_params is not None:
+            self.pix_sca = self.sensor_params.pixel_pitch
 
     @classmethod
     def from_hdu(self, hdu):

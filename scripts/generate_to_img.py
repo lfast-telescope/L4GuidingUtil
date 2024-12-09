@@ -1,7 +1,7 @@
 import astropy.units as u
 import matplotlib.pyplot as plt
 
-from telescope_sim import (
+from L4_guiding_util.telescope_sim import (
     generate_star_gaussian,
     apply_telescope,
     apply_fiber,

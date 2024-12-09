@@ -1,5 +1,5 @@
-from annotated_image import StarImage
-from telescope_sim import (
+from L4_guiding_util.annotated_image import StarImage
+from L4_guiding_util.telescope_sim import (
     apply_telescope,
     apply_fiber,
 )
@@ -14,6 +14,6 @@ if __name__ == "__main__":
 
     print(f"{s=}")
 
-    f = apply_fiber(s, (32, 0))
+    f = apply_fiber(s, (0, 0))
 
     f.save_fits("test_fiber_img.fits")
